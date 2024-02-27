@@ -1,3 +1,4 @@
+//Brute
 function longestSubarrayBrute(arr,k){
 	let len=0;
   for(let i=0;i<arr.length;i++){
@@ -14,8 +15,9 @@ function longestSubarrayBrute(arr,k){
 }
 console.log("Longest subarray brute",longestSubarrayBrute([1,2,3,1,1,1,1,4,2,3],4));
 
+//Better
 function longestSubarrayBetter(arr,k){
-	let len=0;
+  let len=0;
   let sum=0;
   let obj= new Map();
   for(let i=0;i<arr.length;i++){
@@ -35,6 +37,7 @@ function longestSubarrayBetter(arr,k){
 }
 console.log("Longest subarray better",longestSubarrayBetter([0,0,0,1],1));
 
+//Optimal
 function longestSubarrayOptimal(arr,k){
 	let sum=arr[0];
   let i=0;
