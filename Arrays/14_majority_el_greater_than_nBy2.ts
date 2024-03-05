@@ -23,10 +23,11 @@ let majorityCount=0;
 var el;
 for(let i=0;i < arr.length;i++){
   if(count=== 0){
-		el=arr[i];
+     count=1;
+     el=arr[i];
   }
   else if (arr[i] === el){
-  	++count;
+    ++count;
   }
   else{
    --count;
