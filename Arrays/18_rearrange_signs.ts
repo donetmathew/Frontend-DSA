@@ -1,10 +1,10 @@
-// variety1 : when positive numbers === negative numbers in an array
+ // variety1 : when positive numbers === negative numbers in an array
 //brute force
 function rearrange(arr){
 	let pos=[];
   let neg=[];
   let res=[];
-  for(i=0;i<arr.length;i++){
+  for(let i=0;i<arr.length;i++){
   	if(arr[i] > 0){
     	pos.push(arr[i]);
     }
@@ -12,7 +12,7 @@ function rearrange(arr){
     neg.push(arr[i]);
     }
   }
-  for(i=0;i<arr.length/2;i++){
+  for(let i=0;i<arr.length/2;i++){
   	res[2*i]=pos[i];
     res[2*i+1]=neg[i];
   }
@@ -25,7 +25,7 @@ function rearrangeOptimal(arr){
 let res=[];
 let pos=0;
 let neg=1;
-	for(i=0;i<arr.length;i++){
+	for(let i=0;i<arr.length;i++){
   	if(arr[i] > 0){
     res[pos]=arr[i];
     pos+=2;
@@ -41,7 +41,7 @@ let neg=1;
 console.log(rearrangeOptimal([1,2,-3,-1,4,-3]));
 
 //variety2 when pos!==neg and add the leftover elemnts to the array
-function rearrangeSign(arr){
+function rearrangeSign(arr:any){
 let pos=[];
 let neg=[];
 let res=[];
@@ -73,5 +73,3 @@ for(let i=0;i<arr.length;i++){
  return res;
 }
 console.log("Rearrange sign",rearrangeSign([1,2,-3,-1,4,-3,7,8,9]))
-
-
