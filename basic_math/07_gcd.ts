@@ -15,13 +15,14 @@ console.log("GCD BRUTE FORCE", printGcd(11, 13));
 //opTIMIZED
 function printGcdOptimized(num1, num2) {
   let gcd;
-  while (num1 > 0 || num2 > 0) {
+  while (num1 > 0 && num2 > 0) {
     if (num1 > num2) {
       num1 = num1 % num2;
     } else {
       num2 = num2 % num1;
     }
-    return num1 === 0 ? num2 : num1;
+    if(num1 === 0) return num2;
+    if(num2 === 0) return num1;
   }
   return gcd;
 }
