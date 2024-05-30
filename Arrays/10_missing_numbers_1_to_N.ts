@@ -53,3 +53,5 @@ function missingNumberOptimal2(arr:any){
 }
 console.log("Missing Number OPtimal",missingNumberOptimal2([9,6,4,2,3,5,7,0,1]));
 //TC: O(N) SC: O(1)
+
+XOR is the optimal because if N is 10^5 then XOR of that number would be 10^5, but if you use n*n+1/2, space complexity would got 10^10, where performance decreases
