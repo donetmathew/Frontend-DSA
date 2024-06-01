@@ -39,24 +39,27 @@ console.log("Longest subarray better",longestSubarrayBetter([0,0,0,1],1));
 
 //Optimal
 function longestSubarrayOptimal(arr,k){
-	let sum=arr[0];
+  let sum=0;
+  let len=0;
   let i=0;
   let j=0;
-  let len=0;
-  
   while(i < arr.length){
-  	if(sum === k){
-    	len=Math.max(len, i-j+1);
+  
+    sum+=arr[i];
+    
+    while(j<=i && sum > k){
+    	sum-=arr[j];
+      j++;
     }
-    while(i<=j && sum > k){
-    	sum-+arr[j];
-      j++
+  	
+    if(sum === k){
+      len=Math.max(len,i-j+1);
     }
-    i++;
-    if(i <  arr.length) sum+=arr[i];
+    i+=1;
   }
   return len;
-}
+  }
+
 console.log("Longest subarray optimal",longestSubarrayOptimal([2,3,5,1,9],10));
 
 
