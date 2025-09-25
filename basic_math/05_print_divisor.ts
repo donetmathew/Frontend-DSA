@@ -2,7 +2,7 @@
 //Brute force -loop through from 1 to n and print.
 //Optimized- loop through 1 to sqrt(n) and print.
 function printDivisor(num) {
-  for (let i = 1; i < Math.sqrt(num); i++) {
+  for (let i = 1; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
       //  console.log(i);
       //(Uncomment to see values)
